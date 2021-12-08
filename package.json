@@ -1,0 +1,32 @@
+{
+  "name": "elliots-advent-of-code",
+  "version": "1.0.0",
+  "description": "elliots advent of code ahahahahahahaha wheeeeee",
+  "main": "index.js",
+  "dependencies": {
+    "@aocjs/cli": "file:../aocjs-cli",
+    "lodash": "^4.17.21",
+    "ts-md5": "^1.2.10",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.177",
+    "@types/node": "^16.11.10",
+    "prettier": "^2.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotfiske/elliots-advent-of-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliotfiske/elliots-advent-of-code/issues"
+  },
+  "homepage": "https://github.com/elliotfiske/elliots-advent-of-code#readme"
+}
