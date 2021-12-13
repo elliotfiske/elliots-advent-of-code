@@ -77,16 +77,18 @@ function part2(lines: Array<string>) {
       return ndx % 4 === 2;
     });
 
-    const inners = _.zip(nums, odds, evens).map((zipped) => {
-      return { n: parseInt(zipped[0]), name: zipped[1] + zipped[2] };
-    });
+    const inners = _.zip(nums, odds, evens)
+      .map((zipped) => {
+        return { n: parseInt(zipped[0]), name: zipped[1] + " " + zipped[2] };
+      })
+      .filter((bag) => bag.name !== "other bags.");
 
     for (let j = 0; j < inners.length; j++) {
       const inner = inners[j];
       if (map[inner.name] === undefined) {
         map[inner.name] = { name: inner.name, contains: {} };
       }
-      map[inner.name].contains[outer] = { node: map[outer], n: inner.n };
+      map[outer].contains[inner.name] = { node: map[inner.name], n: inner.n };
     }
   }
 
