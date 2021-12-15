@@ -1,0 +1,16 @@
+NBBBCNCCNBBNBNBBCHBHHBCHB
+{
+  "N": 5,
+  "B": 11,
+  "C": 5,
+  "H": 4
+}
+
+NC expands to NBC
+
+NBC expands to NBBBC
+
+NBBBC expands to NBBNBNBBC
+3 N
+5 B
+1 C

@@ -1,9 +1,13 @@
 import _ = require("lodash");
 
+
 function createAndFillTwoDArray({ rows, columns, defaultValue }): number[][] {
   return Array.from({ length: rows }, () =>
     Array.from({ length: columns }, () => defaultValue)
   );
+
+  Md5
+
 }
 
 function part1(lines: Array<string>) {
