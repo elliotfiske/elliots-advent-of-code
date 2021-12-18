@@ -22,7 +22,6 @@ function parseLiteralPacket(bin: string): [string, number] {
 
 function parseOperatorPacket(bin: string, id: string): [string, number] {
   let newbin = bin;
-  let versiontotal = 0;
 
   const lengthtype = bin[0];
 
