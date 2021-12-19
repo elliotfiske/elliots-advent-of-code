@@ -7,3 +7,29 @@ NBCC NBBBCBHCB
 NBBBCNCCNBBNBNBBCHBHHBCHB
 NBBBCNCCNBBNB BBCHBHHBCHB
 NbBbCnCcNbBnB BbChBhHbCh
+
+  // const scannerDiffs: Point[][] = []
+  //
+  // for (let i = 0; i < scannerPoints.length; i++) {
+  //   const points = scannerPoints[i];
+  //   const point = points[0];
+  //
+  //   // Find the x, y, z diff between point[0] and the other points
+  //   const differences: { diff: Point; ndx: number }[] = [];
+  //   for (let ndx = 1; ndx < points.length; ndx++) {
+  //     const point2 = points[ndx];
+  //     differences.push({
+  //       diff: {
+  //         x: point.x - point2.x,
+  //         y: point.y - point2.y,
+  //         z: point.z - point2.z,
+  //       },
+  //       ndx,
+  //     });
+  //   }
+  //
+  //   // I am the center of the universe now. Do 12 people in any other scanners agree with me?
+  //   for (let k = 0; k < scannerPoints.length; k++) {
+  //     if (i === k) continue;
+  //   }
+  // }
