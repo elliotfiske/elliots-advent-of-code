@@ -34,8 +34,10 @@ function numPaths(
   }
 
   let result = 0;
+
   for (let ndx = 0; ndx < root.neighbors.length; ndx++) {
     const n = root.neighbors[ndx];
+
     if (
       (seenSmallCaves[n.name] === undefined || seenSmallCaves[n.name] === 1) &&
       n.name !== "start"
