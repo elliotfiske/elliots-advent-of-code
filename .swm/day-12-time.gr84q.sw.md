@@ -4,7 +4,7 @@ name: Day 12 time
 file_version: 1.0.2
 app_version: 0.7.1-1
 file_blobs:
-  src/2021/day12.ts: b60a8d8f767d1a8ec601327230805240957a54ed
+  src/2021/day12.ts: 1d7b3441d66a36ce4544313ab38e6570bcdaa76e
 ---
 
 [https://adventofcode.com/2021/day/12](https://adventofcode.com/2021/day/12)
@@ -50,7 +50,7 @@ Key is the name of the `MapNode`[<sup id="1QJuDD">↓</sup>](#f-1QJuDD) value is
 ⬜ 1      import _ = require("lodash");
 ⬜ 2      
 🟩 3      interface MapNode {
-🟩 4        neighborNodes: MapNode[];
+🟩 4        neighbors: MapNode[];
 🟩 5        name: string;
 🟩 6      }
 🟩 7      
@@ -66,7 +66,7 @@ I used a recursive algorithm to calculate the number of paths!
 
 <br/>
 
-Iterate through my `neighborNodes`[<sup id="9u5Yb">↓</sup>](#f-9u5Yb) , ignoring small caves that have already been visited.
+Iterate through my `neighbors`[<sup id="12a9oD">↓</sup>](#f-12a9oD) , ignoring small caves that have already been visited.
 
 Add up all the viable paths to the end that they have.
 
@@ -79,8 +79,8 @@ Base case is when we find the end and can just return 1.
 ⬜ 35     
 🟩 36       let result = 0;
 🟩 37     
-🟩 38       for (let ndx = 0; ndx < root.neighborNodes.length; ndx++) {
-🟩 39         const n = root.neighborNodes[ndx];
+🟩 38       for (let ndx = 0; ndx < root.neighbors.length; ndx++) {
+🟩 39         const n = root.neighbors[ndx];
 🟩 40         if (
 🟩 41           (seenSmallCaves[n.name] === undefined || seenSmallCaves[n.name] === 1) &&
 🟩 42           n.name !== "start"
@@ -111,9 +111,9 @@ Base case is when we find the end and can just return 1.
 interface MapNode {
 ```
 
-<span id="f-9u5Yb">neighborNodes</span>[^](#9u5Yb) - "src/2021/day12.ts" L38
+<span id="f-12a9oD">neighbors</span>[^](#12a9oD) - "src/2021/day12.ts" L38
 ```typescript
-  for (let ndx = 0; ndx < root.neighborNodes.length; ndx++) {
+  for (let ndx = 0; ndx < root.neighbors.length; ndx++) {
 ```
 
 <span id="f-qrHkh">nodeMap</span>[^](#qrHkh) - "src/2021/day12.ts" L8

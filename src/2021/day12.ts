@@ -1,7 +1,7 @@
 import _ = require("lodash");
 
 interface MapNode {
-  neighborNodes: MapNode[];
+  neighbors: MapNode[];
   name: string;
 }
 
@@ -35,8 +35,8 @@ function numPaths(
 
   let result = 0;
 
-  for (let ndx = 0; ndx < root.neighborNodes.length; ndx++) {
-    const n = root.neighborNodes[ndx];
+  for (let ndx = 0; ndx < root.neighbors.length; ndx++) {
+    const n = root.neighbors[ndx];
     if (
       (seenSmallCaves[n.name] === undefined || seenSmallCaves[n.name] === 1) &&
       n.name !== "start"
@@ -58,14 +58,14 @@ function part1(lines: Array<string>) {
     const [start, end] = lines[i].split("-");
 
     if (nodeMap[start] === undefined) {
-      nodeMap[start] = { name: start, neighborNodes: [] };
+      nodeMap[start] = { name: start, neighbors: [] };
     }
     if (nodeMap[end] === undefined) {
-      nodeMap[end] = { name: end, neighborNodes: [] };
+      nodeMap[end] = { name: end, neighbors: [] };
     }
 
-    nodeMap[start].neighborNodes.push(nodeMap[end]);
-    nodeMap[end].neighborNodes.push(nodeMap[start]);
+    nodeMap[start].neighbors.push(nodeMap[end]);
+    nodeMap[end].neighbors.push(nodeMap[start]);
   }
 
   return numPaths({}, nodeMap["start"]);
